@@ -7,16 +7,12 @@
 	<artifactId>taskana-simplehistory-rest-spring</artifactId>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<version>0.0.8-SNAPSHOT</version>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<java.version>1.8</java.version>
-		<taskana.version>1.0.7</taskana.version>
-		<spring.version>5.0.5.RELEASE</spring.version>
-	</properties>
+	<parent>
+		<groupId>pro.taskana.simplehistory</groupId>
+		<artifactId>taskana-simplehistory-parent</artifactId>
+		<version>0.0.8-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -197,7 +193,7 @@
 		<dependency>
 			<groupId>org.springframework.hateoas</groupId>
 			<artifactId>spring-hateoas</artifactId>
-			<version>0.24.0.RELEASE</version>
+			<version>0.25.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>

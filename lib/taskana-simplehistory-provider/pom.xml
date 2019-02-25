@@ -11,6 +11,12 @@
 	<description>The taskana history events plugin to include in your project.</description>
 	<url>http://taskana.pro</url>
 
+	<parent>
+		<groupId>pro.taskana.simplehistory</groupId>
+		<artifactId>taskana-simplehistory-parent</artifactId>
+		<version>0.0.8-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
