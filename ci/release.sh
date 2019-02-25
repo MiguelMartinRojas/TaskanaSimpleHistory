@@ -46,7 +46,7 @@ function helpAndExit {
 #   $1: basedir
 function decodeAndImportKeys {
   if [[ ! -f "$1/codesigning.asc" ]]; then
-	openssl aes-256-cbc -K "$encrypted_c64162e168ca_key" -iv "$encrypted_c64162e168ca_iv" -in "$1/codesigning.asc.enc" -out "$1/codesigning.asc" -d
+	openssl aes-256-cbc -K "$encrypted_a4551539cb8c_key" -iv "$encrypted_a4551539cb8c_iv" -in "$1/codesigning.asc.enc" -out "$1/codesigning.asc" -d
     gpg --import "$1/codesigning.asc"
   fi
 }
