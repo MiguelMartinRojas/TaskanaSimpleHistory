@@ -3,27 +3,14 @@
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>pro.taskana.simplehistory</groupId>
 	<artifactId>taskana-simplehistory-rest-spring</artifactId>
 	<name>${project.groupId}:${project.artifactId}</name>
-	<version>0.0.8-SNAPSHOT</version>
 	<parent>
 		<groupId>pro.taskana.simplehistory</groupId>
 		<artifactId>taskana-simplehistory-parent</artifactId>
 		<version>0.0.8-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>pro.taskana.simplehistory</groupId>
-				<artifactId>taskana-simplehistory-parent</artifactId>
-				<version>0.0.8-SNAPSHOT</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
