@@ -13,6 +13,17 @@
 		<version>0.0.8-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>pro.taskana.simplehistory</groupId>
+				<artifactId>taskana-simplehistory-parent</artifactId>
+				<version>0.0.8-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<licenses>
 		<license>
 			<name>The Apache License, Version 2.0</name>
@@ -160,25 +171,18 @@
 		<dependency>
 			<groupId>pro.taskana.simplehistory</groupId>
 			<artifactId>taskana-simplehistory-provider</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>pro.taskana</groupId>
 			<artifactId>taskana-core</artifactId>
-			<version>${taskana.version}</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>pro.taskana</groupId>
 			<artifactId>taskana-spring</artifactId>
-			<version>${taskana.version}</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>pro.taskana</groupId>
 			<artifactId>taskana-rest-spring</artifactId>
-			<version>${taskana.version}</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -193,7 +197,7 @@
 		<dependency>
 			<groupId>org.springframework.hateoas</groupId>
 			<artifactId>spring-hateoas</artifactId>
-			<version>0.25.1.RELEASE</version>
+			<version>0.24.0.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
