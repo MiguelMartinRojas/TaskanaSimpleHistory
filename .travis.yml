@@ -18,8 +18,6 @@ jobs:
           - ci/build.sh lib/ $TRAVIS_TAG
       - stage: Release
         script:
-          - ci/release.sh lib/taskana-simplehistory-provider lib/ $TRAVIS_TAG
-            && ci/release.sh lib/taskana-simplehistory-rest-spring lib/ $TRAVIS_TAG
-            && ci/release.sh lib/ lib/ $TRAVIS_TAG
+          - ci/release.sh lib/ $TRAVIS_TAG
             && ci/change_version.sh -i -m "lib/"
         if: repo = env(DEPLOY_REPO) AND (tag =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ OR branch = mecagoenlaputa) AND type != pull_request

@@ -65,12 +65,12 @@ function change_version {
 #   $2: profile name
 #   $3: settings file (dir)
 function release {
-  mvn deploy -f "$1" -P "$2" --settings "$3" -DskipTests=true -B -U --non-recursive
+  mvn deploy -f "$1" -P "$2" --settings "$3" -DskipTests=true -B -U
 }
 
 function main {
   [[ $# -eq 0 || "$1" == '-h' || "$1" == '--help' ]] && helpAndExit 0
-  [[ "$3" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] && change_version "$2" "${3##v}"
+  [[ "$2" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] && change_version "$1" "${2##v}"
   decodeAndImportKeys `dirname "$0"`
   release "$1" `[[ "$2" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] && echo "release" || echo "snapshot"` "`dirname "$0"`/mvnsettings.xml"
 }
