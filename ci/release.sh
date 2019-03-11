@@ -65,7 +65,7 @@ function change_version {
 #   $2: profile name
 #   $3: settings file (dir)
 function release {
-  mvn release -f "$1" -P "$2" --settings "$3" -DskipTests=true -B -U
+  mvn release:perform -f "$1" -P "$2" --settings "$3" -DskipTests=true -B -U
 }
 
 function main {

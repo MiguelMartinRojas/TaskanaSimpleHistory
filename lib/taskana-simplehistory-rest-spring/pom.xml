@@ -13,6 +13,9 @@
 		<version>0.0.8-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
+	<properties>
+		<maven.deploy.skip>true</maven.deploy.skip>
+	</properties>
 	<build>
 		<plugins>
 			<plugin>
